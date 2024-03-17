@@ -72,6 +72,62 @@ public class G_Triple {
 		
 		System.out.println(result);
 	}
-
+	
+	public void method4_1() {
+		//사용자에게 숫자를 입력받아
+		//0보다 큰지 작은지 판별하는 프로그램 작성
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("숫자 하나입력 :");
+		
+		int num = sc.nextInt();
+		
+		String result =(num >0) ? "0보다 큽니다." : "0또는 0보다 작습니다.";
+		System.out.println("입력하신 숫자"+ num +"은(는)" +result);
+		
+		
+	}
+   
+	public void method5() {
+		//사용자가 입력한 정수값이 
+		//양수인지 ,음수인지 , 0 인지 를 정확하게 판별한 후 출력
+		//삼항 연산자 중첩
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수값 입력 :");
+		int num = sc.nextInt();
+		
+		String result = (num >0 ) ? "양수입니다 ." :(num == 0) ? "0입니다." :"음수입니다.";
+		
+		System.out.println(num + "은(는)" + result);
+	}	
+		
+     public void method6() {
+			//사용자가 두개의 정수값 입력받고
+			// + 또는 -를 입력받아 그에 맞는 연산결과 출력
+			// 단 , +또는 - 외의 다른 문자를 입력했을 경우 "잘못입력했습니다" 출력
+			
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("첫번째 정수 :");
+		int num1 = sc.nextInt();
+		
+		
+		System.out.print("두번쨰 정수:");
+		int num2 = sc.nextInt();
+		
+		// 버퍼에 남아있는 엔터 제거를 위한 코드 작성
+		sc.nextLine();
+		
+		System.out.print("연산자 입력(+또는 -) :");
+	 
+		char op = sc.nextLine().charAt(0);
+		
+		String result =(op == '+') ? num1 + num2 + "" :(op == '-') ? num1 - num2 + "": "잘못입력했습니다";
+    	 
+		
+		System.out.println("결과 :" + result);
+		
+	}
 
 }
