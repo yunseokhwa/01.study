@@ -119,5 +119,64 @@ public class OperatorPractice {
 		 System.out.println(result);
 		 
 	 }
+	 
+	 public void practice9() {
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.print("정수 1 :");
+		 int num1 =sc.nextInt();
+		 
+		 System.out.print("정수2:");
+		 int num2 = sc.nextInt();
+		 
+		 System.out.print("입력:");
+		 int input =sc.nextInt();
+		 
+		 System.out.println((input <= num1 || input >num2));
+		 
+		 
+	 }
+	 
+	 public void practice10() {
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.print("입력1:");
+		 int num1 =sc.nextInt();
+		 System.out.print("입력2 :");
+		 int num2 =sc.nextInt();
+		 System.out.print("입력3 :");
+		 int num3 =sc.nextInt();
+		 
+		 System.out.println(num1 == num2 && num2 == num3 ? "true" :"false");
+		 
+	 }
+	 
+	 
+	 public void practice11() {
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.print("A사원의 연봉:");
+		 int a = sc.nextInt();
+		 System.out.print("B사원의 연봉:");
+		 int b = sc.nextInt();
+		 System.out.print("C사원의 연봉 :");
+		 int c = sc.nextInt(); 
+		 
+		 double alncen = a * 1.4;
+		 double blncen = b * 1.0;
+		 double clncen = c * 1.15;
+		 System.out.println();
+		 
+		 System.out.println("A사원의 인센티브포함 연봉 :" +alncen);
+		 System.out.println(alncen >= 3000? "3000이상" : "3000미만");
+		 
+		 System.out.println("B사원의 인센티브포함 연봉 :" + blncen);
+		 System.out.println(blncen >= 3000?  "3000이상" :"3000미만");
+
+		 
+		 System.out.println("c사원의 인센티브포함 연봉 :" + clncen );
+		 System.out.println(clncen >= 3000? "3000이상" :"3000이상");
+		 
+	 }
 	
 }
