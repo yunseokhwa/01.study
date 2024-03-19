@@ -276,8 +276,88 @@ public class A_For {
 		   */
 		  
 		  for(int i=1;i<10;i++) {
+			  //system.out.println("2x"+"+i+"="2*i};
+			  
+			  System.out.printf("%d x %d =%d\n",2,i,2*1);
 		
 		  }
+	  }
+	  public void method12() {
+		  //사용자에게 단을 입력 받아 구구단 출력
+		  // int dan;
+		  //2~9사이의 정수를 입력:2~9사이의 숫자를 입력해야 됩니다. 잘못입력하셨습니다
+		  //잘입력했을 경우 => 해당 하는구구단 출력
+		  
+		  Scanner sc = new Scanner(System.in);
+		  int dan = sc.nextInt();
+		  
+		  if(dan>=2 &&dan <= 9) {
+			  for(int i=1; i<10; i++) {
+				  System.out.printf("%d x%d=%d\n",dan,i,dan*i);
+			  }
+			  
+		  }else {
+			  System.out.println("2~9사이의 숫자를 입력해야 됩니다. 잘못입력하셨습니다.");
+		  }
+	  }
+	  public void method13() {
+		  // 2부터 9 사이의 램던값 발생시켜서 램덤단 출력하기
+		  int dan =(int)(Math.random()*8+2);//시작수 더하고 개수 곱함
+		  //        0.0<=            <1.0
+		  //        0.0<=             <8.0
+		  //         2.0<=            <10.0
+		  
+		System.out.println("==="+dan +"단 ===");
+		for(int i=1;i<10; i++) {
+			System.out.printf("%dx %d = %d\n", dan , i , dan*i);
+		}
+	  }
+	  //중첩 for문
+	  public void method14() {
+		  //1 2 3 4 5
+		  // 1 2 3 4 5
+		  // 1 2 3 4 5
+		  
+		  for(int j=1; j<=3; j++) {
+			  for(int i=1; i<=5; i++) {
+				  System.out.print(i+"");
+				  System.out.println();
+			  }
+		  }
+	  }
+	  public void method15() {
+		  // ****
+		  // ****
+		  // ****
+		  //행은 1~4 행 까지 반복 => 바깥쪽  for문
+		  //매행 고정일때 열은  1~4까지 반복 => 안쪽 for문
+		  for(int j=1; j<=4; j++) {
+			  for(int i=1; i<=4; i++) {
+				  System.out.print("*");
+			  }
+			  System.out.println();
+		  }
+	  }
+	  public void method16() {
+		  //1***=> 1행 1열 일때
+		  //*2**=>2행 2열일때
+		  //**3*=>2행 3열일때
+		  //***4=> 4행 4열일때
+		  
+		  for(int j=1; j<=4; j++) {// 행담당
+			  for(int i=1; i<=4; i++) {// 열담당
+				  
+				  if(j == i) {
+					  System.out.print(j);
+				  }else {
+					  System.out.print("*");
+				  }
+			  }
+			  System.out.println();
+		  }
+	  }
+	  public void method17() {
+		  //2단부터 9단까지 출력
 	  }
 	}
 
