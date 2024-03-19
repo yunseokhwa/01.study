@@ -358,6 +358,29 @@ public class A_For {
 	  }
 	  public void method17() {
 		  //2단부터 9단까지 출력
+		 // 2단 출력
+		 // int dan =2;
+		  for(int dan = 2;dan <=9;dan++) {
+			  System.out.println("===" + dan + "단 ===");
+			  for(int i=1; i<10; i++) {
+			  System.out.printf("%d x %d = %d\n",dan,i,dan*i);
+		  }
+		  System.out.println();
+		 
 	  }
-	}
+	  }
+	  public void method18() {
+		  for(;;) {//조건식 자리 생략시 기본으로 ture => 무한반복문 
+			  
+			 System.out.println("안녕");
+		  }
+	  }
+	  
+	  
+   
 
+   
+}
+
+	
+	
