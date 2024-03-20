@@ -2,6 +2,8 @@ package com.kr.practice.chap01;
 
 import java.util.Scanner;
 
+import javax.swing.tree.FixedHeightLayoutCache;
+
 public class Controlpractice {
 public void practice1( ) {
 		
@@ -136,61 +138,56 @@ public void practice4( ) {
 public void practice5( ) {
 	
 	
-	Scanner sc = new Scanner(System.in);
 	
-	String a = "myld";
-    String b = "myPassword12";
-    
-    System.out.print("아이디 : ");
-    String id  = sc.next();
-    System.out.print("비밀번호 : ");
-    String  pw  = sc.next();
-
-    if(id.equals(a) && pw.equals(b)) {
-        System.out.println("로그인 성공");
-        }
+	 String id= "Korea";
+     String pw ="1234";
      
-    else {
-        if(a.equals(id)) {
-            System.out.println("비밀번호가 틀렸습니다.");
-        }
-	else {
-        System.out.println("아이디가 틀렸습니다.");
+    Scanner sc =new Scanner(System.in);
+     
+     System.out.print("id입력:");
+     String userId =sc.next();
+     
+     System.out.print("pw 입력:");
+     String userPw =sc.next();
+     
+     if(id.equals(userId)&& pw.equals(userPw)) {
+    	 System.out.println("로그인 성공");
+     }else {
+    	 if(id.equals(userId)) {
+    		 System.out.println("비밀번호가 틀렸습니다 ");
+    	 }else {
+    		 System.out.println("아이디가 틀렸습니다");
+    	 }
+     
         
         
-        }
-
-        
-		}   
-	}
-        
-        
-    public void practice6( ) {
-	
-	Scanner sc = new Scanner(System.in);
-	
-	
-	 System.out.print("권한을 확인하고자 하는 회원 등급");
-     int level = sc.nextInt();
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
-
+   
+     }
 }
-public void practice7( ) {
-	
+
+public void Practice6() {
 	Scanner sc = new Scanner(System.in);
+	System.out.print("권한을 확인하고자 하는 회원등급:");
+	String level =sc.nextLine();
+	
+	if(level.equals("관리자")) {
+		System.out.println("회원관리,게시글관리,게시글 작성,게시글 조회,댓글작성");
+		
+	}else if(level.equals("회원")) {
+	  System.out.println("게시글 작성, 게시글 조회, 댓글작성");
+	  
+	}else System.out.println("게시글 조회");
+}
+	
+	
+	
+	
+	
+	
+	
+	public void practice7( ) {
+	
+
 	
 	/*
 	 * 키, 몸무게를 double로 입력 받고 BMI지수를 계산하여 계산 결과에 따라
@@ -200,23 +197,37 @@ BMI가 18.5미만일 경우 저체중 / 18.5이상 23미만일 경우 정상체�
 BMI가 23이상 25미만일 경우 과체중 / 25이상 30미만일 경우 비만
 BMI가 30이상일 경우 고도 비만
 	 */
+	Scanner sc = new Scanner(System.in);
+		
 	System.out.print("키를 입력해주세요:");
-	double heighe = sc.nextDouble();
+	double height = sc.nextDouble();
 	
 	System.out.print("몸무게를 입력해주세요 :");
 	double weight = sc.nextDouble();
 	
 	
-	
-	
-	
+   double bmi = weight/ (height *height);
+   System.out.println(bmi);
+   
+   if(bmi < 18.25) {
+	   System.out.println("저체중");
+   }else if(bmi <23) {
+	   System.out.println("정상체중");
+   }else if(bmi <25) {
+	   System.out.println("과체중");
+   }else if(bmi < 30) {
+	   System.out.println("비만");
+   }else {
+	   System.out.println("고도비만");
+   }
+}	
 	
 	
 	
 	
 	
 
-}
+
 
 public void practice8( ) {
 	
@@ -238,7 +249,13 @@ public void practice8( ) {
 	char op = sc.nextLine().charAt(0);
 	if ((num1> 0)&& (num2>0)) {//둘다 양수인 경우 
 		
-			
+	switch(op) {
+	case '-':
+		System.out.printf("%d-%d = %d", num1,num2, num1-num2);
+		break;
+		default:
+			System.out.println("잘못입력하였습니다.프로그램을 종료합니다");
+	}
 		
 			
 			
@@ -298,7 +315,15 @@ public void practice9( ) {
 	System.out.println("과제 점수 (20):"+ aScore);	
 		
 	
-		
+    double sumScore = mScore +fScore + hScore +aScore;
+    
+    System.out.println("총점 : 61.0");
+    
+    if(sumScore >= 70) {
+    	System.out.println("PASS");
+    }if(sumScore <70) {
+    	System.out.println("Fall[점수미달]");
+    }
 		
 		
 		
@@ -311,11 +336,18 @@ public void practice10( ) {
 	Scanner sc = new Scanner(System.in);
 	
 	
-	
-	
-	
-	
-	
+	  System.out.print("실행할 기능을 선택하세요.\n1.메뉴 출력 \n2.짝수/홀수 \n3. 합격/불합격 "
+              + "\n4. 계절 \n5. 로그인 \n6. 권한 확인 \n7. BMI \n8. 게산기 \n9. P/F \n선택 : ");
+   
+               int func = sc.nextInt();
+               
+               switch(func) {
+               case 4:
+            	   practice4();
+            	   break;
+               }
+	     
+               sc.close();
 	
 	
 	

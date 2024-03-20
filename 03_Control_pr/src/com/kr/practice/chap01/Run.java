@@ -12,7 +12,7 @@ public static void main(String[] args) {
 		//A.practice4();
 		//A.practice5();
 		//A.practice6();
-		//A.practice7();
+		A.practice7();
 		
 		//A.practice8();
 		//A.practice9();
