@@ -276,6 +276,7 @@ public class A_For {
 		   */
 		  
 		  for(int i=1;i<10;i++) {
+
 			  //System.out.println("2"x"+i +"="+2*i);
 			  
 			System.out.printf("%dx %d = %d\n",2, i,2*1);
@@ -381,10 +382,4 @@ public class A_For {
 	    		System.out.println();
 	    	}
 	    }
-	    public void method18() {
-	    	for(;;) {//조건식 자리 생략시 기본으로 true => 무한반복문
-	    		System.out.println("안녕");
-	    	}
-	    }
-	}
-
+}
